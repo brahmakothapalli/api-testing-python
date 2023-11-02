@@ -8,7 +8,7 @@ header ={
 credentials = ('postman', 'password') # username and password as a tuple
 
 def test_basic_auth_using_token():
-    '''testing basic auth using '''
+    '''testing basic auth using token'''
     response = requests.get(BASE_URI, headers=header)
     print(response.text)
     status = response.status_code
@@ -19,7 +19,7 @@ def test_basic_auth_using_token():
         print("Authentication failed")
 
 def test_basic_auth():
-    '''testing basic auth using '''
+    '''testing basic auth using credentials'''
     response = requests.get(BASE_URI, auth=credentials)
     print(response.text)
     status = response.status_code
@@ -28,3 +28,5 @@ def test_basic_auth():
         print("Authentication successful")
     else:
         print("Authentication failed")
+
+
